@@ -1,0 +1,158 @@
+$color:white;
+body{
+  background-color: #272727;
+  header{
+        z-index: 1;
+        width: 92%;
+        height: 10vh;
+        background: rgb(140, 224, 2);
+        margin-left: 4vw;
+        margin-right: auto;
+        margin-top: auto;
+        border-color: 2px solid blue;
+        border-bottom: 6px double #272727;
+        position: fixed;
+      div{a{
+        img{
+          z-index: 1;
+          float:left;
+          color: $color;
+          width: 10vw;
+          height: 25vh;
+          position: fixed;
+        }}
+
+        div{
+            float:right;
+
+
+          a{
+            padding-right: 2vw;
+            font-size: 4vh;
+            color: $color;
+
+
+            span{
+              font-size: 8vh;
+              color: $color;
+
+            }
+          }
+        }
+
+   }
+  nav{ border-color: 2px solid red;
+       width: 92%;
+       margin-left: 10vw;
+       margin-right: auto;
+      background:#272727;
+      display: inline-block;
+
+    div{
+  text-align: center;
+  ul{
+
+    li{
+      display: inline-block;
+      text-align: center;
+      a{ color: $color;padding-right: 3vw;font-size: 3vh;display: block;
+        &:hover{background-color: rgb(123, 233, 36); color:#272727;}
+        }
+       &:last-child {
+               a{color:rgb(123, 233, 36);}
+               a:hover {background-color:transparent;text-decoration:underline;  }  }
+
+       &:nth-child(2) ul{display: none;position: absolute; width: 200px;background-color: rgb(123, 233, 36);
+                         li{float: none;display: inline;width:100px;line-height:35px;text-align: left;
+                            a{color:#272727 }
+                            &:hover a{background-color: rgb(229, 233, 213)};
+                            }
+                        }
+        &:nth-child(2):hover ul{display: block;}
+
+      }
+    }
+   }
+ }
+ }
+ section{
+   top: 13vh;
+   position: relative;
+         input{ display: none;
+                &:checked ~ #slider{ /*размер всего слайдера*/
+	                                   max-width: 92%; /*максимальнная длина*/
+                                      max-height: 90vh;
+                                       }
+              }
+      div{
+       /*border: 2px solid green;*/
+        width:92%;
+        height:90vh;
+
+        /*text-align: center;*/
+        margin: 0 auto;
+        #switch1:checked ~ #slides .image{ margin-left: 0;
+                       & ~ #active label:nth-child(1){background: #cee002}}
+        #switch2:checked ~ #slides .image{margin-left: -100%;
+                       & ~ #active label:nth-child(2){background: #cee002}}
+        #switch3:checked ~ #slides .image{margin-left: -200%;
+                       & ~ #active label:nth-child(3){background: #cee002}}
+
+        div {
+
+                text-align: center;
+                  div{ /*сркывает все, что находится за пределами этого блока*/
+                            width: 100%;
+                            height: 90vh;
+                            overflow:hidden;
+
+                           div{ /*устанавливает общий размер блока с изображениями*/
+                                  width: 300%;
+                                  height: 90vh;
+
+                                  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+                                  figure{ /*все изображения справа друг от доруга*/
+                                        	width: 33.3%;
+                                          display: inline-block;
+                                          position: relative;
+                                         img{ /*размер изображений слайдера*/
+	                                              width: 100%;
+                                               height:79vh;
+                                             }
+                                        }
+                                }
+                          }
+             }
+          div{ /*расположение блока с переключателями*/
+            //       	right: 20vw;
+                    //  bottom:40vh;
+                    display:block;
+                  	text-align: right;
+                   position: absolute;
+                     label{ /*стиль отдельного переключателя*/
+	                         display: inline-block; /*расположение в строку*/
+	                         width: 30px;
+	                         height: 7px;
+	                         background:white;
+                           &:hover{ /*поведение чекбокса при наведении*/
+                                   	background: #cee002;	}
+                          }
+
+                 }
+
+
+
+
+
+           }
+
+
+
+
+
+
+
+
+ }
+
+}
